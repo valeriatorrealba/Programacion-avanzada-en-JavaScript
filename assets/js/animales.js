@@ -1,50 +1,21 @@
-import Animal from "./animal.js";
+//Creamos una iife para obtener los datos desde el archivo json
+//con el fin de que los datos estén disponibles al cargar la página.
+let animales = (() => {
+    // const url = "http://localhost:5500/animales.json";
+    const url = "./animales.json";
+    const getData = async () => {
+        const res = await fetch(url);
+        const { animales } = await res.json();
+        return animales;
+    };
+    return { getData };
+})();
 
-const audioPlayer = document.getElementById('player');
+  // si quisieramos ver si funciona en consola primero
+  // animales.getData().then(animales => {
+  //   console.log('Animales obtenidos:', animales);
+  // }).catch(error => {
+  //   console.error('Error al obtener animales:', error);
+  // });
 
-class Leon extends Animal{
-    constructor(nombre, edad, img, comentarios, sonido){
-        super(nombre, edad, img, comentarios, sonido)
-    }
-    rugir(){
-        audioPlayer.src = `assets/sounds/${this._sonido}`;
-        audioPlayer.play();
-    }
-}
-class Lobo extends Animal{
-    constructor(nombre, edad, img, comentarios, sonido){
-        super(nombre, edad, img, comentarios, sonido)
-    }
-    aullar(){
-        audioPlayer.src = `assets/sounds/${this._sonido}`;
-        audioPlayer.play();
-    }
-}
-class Oso extends Animal{
-    constructor(nombre, edad, img, comentarios, sonido){
-        super(nombre, edad, img, comentarios, sonido)
-    }
-    gruñir(){
-        audioPlayer.src = `assets/sounds/${this._sonido}`;
-        audioPlayer.play();
-    }
-}
-class Serpiente extends Animal{
-    constructor(nombre, edad, img, comentarios, sonido){
-        super(nombre, edad, img, comentarios, sonido)
-    }
-    sisear(){
-        audioPlayer.src = `assets/sounds/${this._sonido}`;
-        audioPlayer.play();
-    }
-}
-class Aguila extends Animal{
-    constructor(nombre, edad, img, comentarios, sonido){
-        super(nombre, edad, img, comentarios, sonido)
-    }
-    chillar(){
-        audioPlayer.src = `assets/sounds/${this._sonido}`;
-        audioPlayer.play();
-    }
-}
-export { Leon, Lobo, Oso, Serpiente, Aguila };
+export default animales;
