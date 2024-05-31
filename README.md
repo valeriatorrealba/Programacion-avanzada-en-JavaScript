@@ -7,5 +7,7 @@ investigación, utilizando el paradigma POO para la creación de las instancias 
 los diferentes animales con sus atributos y métodos.
 
 ![animal](screenshot/animal1.png)
+
 ![animal](screenshot/animal2.png)
+
 ![animal](screenshot/animal3.png)
