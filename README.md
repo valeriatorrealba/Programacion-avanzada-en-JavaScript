@@ -8,11 +8,11 @@ En Australia, se están realizando investigaciones con algunos animales salvajes
 
 A continuación, se muestra la imagen del resultado codificado:
 
-![animal](screenshot/animal1.png)
+![animal](assets/screenshot/animal1.png)
 
-![animal](screenshot/animal2.png)
+![animal](assets/screenshot/animal2.png)
 
-![animal](screenshot/animal3.png)
+![animal](assets/screenshot/animal3.png)
 
 
 ## Requisitos
